@@ -1,0 +1,102 @@
+It was a real learning experience doing this from GitBash. 
+having to create a bashrc alias command to run Notepad++ from GitBash was tough but,
+StackOverflow and SuperUser were really helpful.
+
+To create the create the alias I checked the path for the application and added it to the PATH in advanced system settings.
+I'm not sure if that was entirely necesary. But it is useful for other applications anyway.
+
+I then created a .bashrc file and edited it with vim within the GitBash editor.
+
+The Steps I took are outlined below:
+
+		By default you won't have a .bashrc file so just navigate your to your home directory by typing:
+
+		cd ~ 		# This changes you to the Home directory
+		
+		touch .bashrc    # THIS CREATES THE .BASHRC FILE
+
+		vim .bashrc		 # THIS ALLOWS YOU TO CREATE OR EDIT THE .BASHRC WITH VIM:
+		
+		Change to Insert Mode by hitting the i key.
+
+		Add your alias by typing:
+
+				alias npp="/c/Program\ Files\ \(x86\)/Notepad++/notepad++.exe"  # THIS IS THE COMMAND I USED FOR NOTEPAD++
+				
+		Exit the insert mode by hitting the ESC key.
+
+		Save and close your file by typing the following :wqEnter.
+
+		:wEnter will only save your file.
+
+		:q!Enter will quit the editor without saving your file.
+
+		Finally, update the file to use your new changes by typing:
+
+		source .bashrc
+
+I initialy was not sure how to exit vim and save so my first attempt failed.
+
+The second attempt failed as I missed off the closing " which made me get an error message when i tried to update
+the .bashrc file using source .bashrc .
+
+However it is now fully working and i need only type npp into the GitBash editor to open Notepad++ now.
+
+Also i can type (for example) npp lesson_1_reflections.txt and it will open this if i am in the correct directory.
+
+It will also create that file if it doesnt already exist. which is awesome.
+
+
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+    comparing and contrasting just the differences is far easier than scanning several thousand
+	lines and snippets of code.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    It will save a huge amount of time when a small mistake or change makes a difference to the product
+	which is unwanted, or problematic.
+	also useful to have a few different copies of the source code with different changes to see which works best
+	and easily filter through each to see just what was changed.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    manually having to save and commit forces you to be thinking about this all the time. and makes the program more lightweight
+	however, it could also lead to things being forgotten, within the early stages.
+	
+	manually saving each commit allows you to have a greater degree of control over the commits and enables you to then have
+	a logical break for each commit.
+	It allows you to focus on one specific area or function and then commit that change with a note saying what you have worked
+	on. This makes the history logical to follow and easier to compare.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git is primariy set up for code. when creating programs or webApps or websites you often have several files that are reliant 
+	on oneanother to function. for this reason it is useful to track changes across multiple files and file types at once.
+	However google docs is mainly for office doc. style application. where a single file is accessed and changed and they are
+	independent of oneanother for the most part. therefore tracking changes accross multiple files is unecesary.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    once you have cloned a git repository to your computer or location. using:
+	
+	git clone followed by a url to the repository
+	
+	you can cd into the correct folder for and use git log to view all the commits that have been made to the repository, 
+	accross all files and file types.
+	you can also then use git diff followed by two git id's to view the changes that were made accross two different commits
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    using Git checkout you can always revert to previous versions of the code. if a bug is found, you can checkout a version
+	before the bug and use git diff to see which piece of code is different and may have caused the error.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Not yet learned this
