@@ -31,7 +31,10 @@ stored locally?
 How would you collaborate without using Git or GitHub?  What would be easier,
 and what would be harder?
 
-    Fill in your answer here
+    You would have to have either a cloud repository with documents that could be scp to your local device,
+	or share via email etc. however these would lack version control unless you were very disciplined. would
+	take up. more space and almost certainly more time. you would also have to use u- diff on each file which
+	is time consuming to look through for changes.
 
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
