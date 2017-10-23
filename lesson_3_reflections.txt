@@ -39,4 +39,9 @@ and what would be harder?
 When would you want to make changes in a separate branch rather than directly in
 master?  What benefits does each approach have?
 
-    Fill in your answer here
+    making changes in a seperate branch means that the main source is unnafected if any new bugs appear
+	and the changes can be tested to see if they conflict with the main branch.
+	other collaborators can easily asses the merits of the branch and agree whether it should be merged into
+	the master branch.
+	without this functionality you would be constantly revising the main source file and with multiple contributors
+	this could become a confusing mess pretty quickly.
